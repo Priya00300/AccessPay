@@ -16,10 +16,8 @@
   transition: all var(--transition-fast);
   cursor: pointer;
   position: relative;
-}
-
-/* Ensure minimum touch target size (44x44px for WCAG) */
-.button {
+  
+  /* Ensure minimum touch target size (44x44px for WCAG) */
   min-height: 44px;
   min-width: 44px;
 }

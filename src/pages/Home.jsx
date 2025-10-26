@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useRouteAnnouncement } from '../hooks/useFocusManagement'
-import Button from '../components/common/Button/Button'
+import Button from '../../components/common/Button/Button'
 import styles from './Home.module.css'
 
 /**

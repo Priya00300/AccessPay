@@ -23,6 +23,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
+      - name: Install matching ChromeDriver
+        run: npx browser-driver-manager install chrome
+      
       - name: Build application
         run: npm run build
       
@@ -45,7 +48,7 @@ jobs:
         run: npm run test -- --run --reporter=verbose
       
       - name: Comment PR with results
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && success()
         uses: actions/github-script@v6
         with:
           script: |
@@ -54,4 +57,16 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: '✅ Accessibility tests passed! No WCAG violations detected.'
+            })
+      
+      - name: Comment PR with failure
+        if: github.event_name == 'pull_request' && failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ Accessibility tests failed. Please check the test results and fix any accessibility issues.'
             })

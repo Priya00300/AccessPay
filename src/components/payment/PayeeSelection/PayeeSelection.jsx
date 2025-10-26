@@ -159,6 +159,7 @@ function PayeeSelection({ onNext, initialData = {} }) {
           message={t('validation.formErrors', { count: errorCount })}
           id="form-errors"
           variant="error"
+          role="alert"
         />
       )}
 
@@ -208,7 +209,7 @@ function PayeeSelection({ onNext, initialData = {} }) {
           </div>
           
           {errors.payeeId && touched.payeeId && (
-            <div id="payeeId-error" className={styles.error} role="alert">
+            <div id="payeeId-error" className={styles.error}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <circle cx="12" cy="12" r="10" />
                 <line x1="12" y1="8" x2="12" y2="12" />

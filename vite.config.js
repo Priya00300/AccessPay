@@ -8,7 +8,8 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    environment: 'jsdom',
+    environment: 'happy-dom', // Use happy-dom instead of jsdom
     setupFiles: './tests/setup.js',
+    include: ['src/**/*.{test,spec}.{js,jsx,ts,tsx}'],
   }
 })
