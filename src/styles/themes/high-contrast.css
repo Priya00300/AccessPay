@@ -1,0 +1,33 @@
+[data-theme="high-contrast"] {
+  --color-primary: #0000ff;
+  --color-primary-dark: #0000cc;
+  --color-success: #008000;
+  --color-success-bg: #ccffcc;
+  --color-error: #ff0000;
+  --color-error-bg: #ffcccc;
+  --color-warning: #ff8c00;
+  --color-warning-bg: #ffe4b3;
+  
+  --color-text: #000000;
+  --color-text-secondary: #333333;
+  --color-background: #ffffff;
+  --color-surface: #f0f0f0;
+  --color-border: #000000;
+  
+  --color-focus: #ffff00;
+  --focus-outline-width: 4px;
+  
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+}
+
+[data-theme="high-contrast"] * {
+  border-width: 2px;
+}
+
+[data-theme="high-contrast"] button,
+[data-theme="high-contrast"] input,
+[data-theme="high-contrast"] select {
+  border: 2px solid var(--color-text);
+}

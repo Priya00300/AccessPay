@@ -1,0 +1,25 @@
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .container {
+  padding-right: var(--spacing-md);
+  padding-left: var(--spacing-md);
+}
+
+/* Flip margins and paddings */
+[dir="rtl"] .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .mr-auto {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+/* Flip icons and arrows */
+[dir="rtl"] .icon-arrow-right {
+  transform: scaleX(-1);
+}

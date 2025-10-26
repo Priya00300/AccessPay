@@ -1,0 +1,20 @@
+{
+  "payees": [
+    {
+      "id": "1",
+      "name": "Electric Company",
+      "accountNumber": "****1234"
+    },
+    {
+      "id": "2",
+      "name": "Water Utility",
+      "accountNumber": "****5678"
+    },
+    {
+      "id": "3",
+      "name": "Internet Provider",
+      "accountNumber": "****9012"
+    }
+  ],
+  "payments": []
+}

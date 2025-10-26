@@ -1,0 +1,160 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-xl) 0;
+  text-align: center;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.cardTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-lg) 0;
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--color-border);
+}
+
+/* Description List - Semantic structure for screen readers */
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin: 0;
+}
+
+.detailItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  align-items: baseline;
+}
+
+.detailLabel {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.detailValue {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  margin: 0;
+  text-align: right;
+}
+
+.amount {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.confirmationBox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background-color: #cfe2ff;
+  border: 2px solid #084298;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.infoIcon {
+  flex-shrink: 0;
+  color: #084298;
+  margin-top: 2px;
+}
+
+.confirmationText {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: #084298;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: space-between;
+}
+
+.actions button {
+  flex: 1;
+}
+
+/* High contrast mode */
+[data-theme="high-contrast"] .card {
+  border-width: 3px;
+}
+
+[data-theme="high-contrast"] .cardTitle {
+  border-bottom-width: 3px;
+}
+
+[data-theme="high-contrast"] .confirmationBox {
+  border-width: 3px;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .confirmationBox {
+  background-color: #0d1829;
+  border-color: #6ea8fe;
+}
+
+[data-theme="dark"] .infoIcon,
+[data-theme="dark"] .confirmationText {
+  color: #6ea8fe;
+}
+
+/* RTL support */
+[dir="rtl"] .detailValue {
+  text-align: left;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .title {
+    font-size: var(--font-size-xl);
+  }
+
+  .card {
+    padding: var(--spacing-lg);
+  }
+
+  .detailItem {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xs);
+  }
+
+  .detailValue {
+    text-align: left;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}

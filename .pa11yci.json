@@ -1,0 +1,16 @@
+{
+  "defaults": {
+    "timeout": 10000,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+    },
+    "standard": "WCAG2AA",
+    "runners": ["axe", "htmlcs"],
+    "includeWarnings": true,
+    "includeNotices": false
+  },
+  "urls": [
+    "http://localhost:4173",
+    "http://localhost:4173/payment"
+  ]
+}
